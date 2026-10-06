@@ -1,0 +1,42 @@
+name: Generate contribution snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [devel]
+    paths-ignore:
+      - "assets/github-snake.svg"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: devel
+
+      - name: Generate synthwave snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/github-snake.svg?color_snake=#ff2a6d&color_dots=#2d1b4e,#5a189a,#9d4edd,#c77dff,#ff6ec7
+
+      - name: Commit snake to devel
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-snake.svg
+          if git diff --cached --quiet; then
+            echo "Snake unchanged, nothing to commit."
+          else
+            git commit -m "Update contribution snake"
+            git push origin HEAD:devel
+          fi
