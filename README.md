@@ -5,7 +5,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0b2e,45:9d4edd,100:ff2a6d&height=230&section=header&text=Nat%20Portillo&fontSize=78&fontColor=ffffff&fontAlignY=38&animation=twinkling&desc=digital%20archivist%20%E2%80%A2%20technomancer%20%E2%80%A2%20retired%20engineer&descSize=20&descAlignY=60" width="100%" alt="Nat Portillo"/>
 
 <a href="https://github.com/claunia">
-  <img src="https://readme-typing-svg.demolab.com?font=VT323&size=30&duration=2800&pause=900&color=FF2A6D&center=true&vCenter=true&width=720&height=50&lines=%3E+Hi!+I'm+Nat+(they+%2F+elle);%3E+Guardian+of+computing's+past;%3E+Creator+of+the+Aaru+Data+Preservation+Suite;%3E+Building+Marechai%2C+a+museum+of+computing;%3E+Neurodivergent+%C2%B7+Plural+%C2%B7+Proud;%3E+Retired+engineer%2C+full-time+tinkerer;%3E+Hecho+en+las+Islas+Canarias" alt="Typing SVG"/>
+  <img src="https://readme-typing-svg.demolab.com?font=VT323&size=30&duration=2800&pause=900&color=FF2A6D&center=true&vCenter=true&width=720&height=50&lines=%3E+Hi!+I'm+Nat+(they+%2F+elle);%3E+Guardian+of+computing's+past;%3E+Creator+of+the+Aaru+Data+Preservation+Suite;%3E+Building+Marechai%2C+a+museum+of+computing;%3E+NEW%3A+Media+Muxing+Wizard+-+HDR+done+right;%3E+Neurodivergent+%C2%B7+Plural+%C2%B7+Proud;%3E+Retired+engineer%2C+full-time+tinkerer;%3E+Hecho+en+las+Islas+Canarias" alt="Typing SVG"/>
 </a>
 
 <br/>
@@ -108,6 +108,7 @@ timeline
         2024 : Hit Save! emeritus · press interviews on trans healthcare
         2025 : AaruFormat V2 · libaaruformat 1.0 alpha · full Aaru GUI
         2026 : OBMAFS3 open-sourced · Aaru 6.0 beta · retired, still tinkering
+             : Media Muxing Wizard, the muxer that understands the video it carries
 ```
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:ff2a6d,50:9d4edd,100:05d9e8&height=3" width="100%"/>
@@ -175,12 +176,79 @@ one commit (1,600+ of them) and one machine at a time.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:ff2a6d,50:9d4edd,100:05d9e8&height=3" width="100%"/>
 
+## 🎬 NEW · Media Muxing Wizard — the muxer that understands the video it carries
+
+<div align="center">
+
+<a href="https://github.com/claunia/MediaMuxingWizard"><img src="https://raw.githubusercontent.com/claunia/MediaMuxingWizard/devel/packaging/icon/icon-512.png" width="160" alt="Media Muxing Wizard"/></a>
+
+<img src="https://img.shields.io/badge/%E2%9C%A8_fresh_release-2026-ff2a6d?style=for-the-badge&labelColor=1a0b2e"/>
+<a href="https://github.com/claunia/MediaMuxingWizard/stargazers"><img src="https://img.shields.io/github/stars/claunia/MediaMuxingWizard?style=for-the-badge&logo=github&color=9d4edd&labelColor=1a0b2e"/></a>
+<img src="https://img.shields.io/badge/MP4_%2B_Matroska-one_app-c77dff?style=for-the-badge&labelColor=1a0b2e"/>
+<img src="https://img.shields.io/badge/Linux_%C2%B7_macOS_%C2%B7_Windows-ff6ec7?style=for-the-badge&labelColor=1a0b2e"/>
+<img src="https://img.shields.io/badge/Avalonia_%C2%B7_.NET_10-7b2cbf?style=for-the-badge&logo=dotnet&logoColor=white&labelColor=1a0b2e"/>
+<img src="https://img.shields.io/badge/license-GPLv3-ff2a6d?style=for-the-badge&labelColor=1a0b2e"/>
+
+</div>
+
+> *Most muxers copy bytes from one box to another and hope for the best. **Media Muxing Wizard reads your streams.***
+
+**Subler only writes MP4 and only runs on macOS. MKVToolNix only writes Matroska.** Media Muxing Wizard reads and writes
+**both**, on every desktop OS, and it **never re-encodes your media**.
+
+<div align="center">
+<a href="https://github.com/claunia/MediaMuxingWizard"><img src="https://raw.githubusercontent.com/claunia/MediaMuxingWizard/devel/docs/screenshots/dolby-vision-repair.png" width="90%" alt="Repairing a Matroska file that lost its Dolby Vision configuration"/></a><br/>
+<sub><i>A Matroska episode that lost its Dolby Vision configuration. One click on <b>Repair</b> rebuilds it from the bitstream.</i></sub>
+</div>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+- 🩹 **Repairs Dolby Vision.** It finds the RPU in the bitstream and rebuilds the lost configuration. No other muxer we know of does this.
+- 🚀 **Codecs from the future:** AV2, VVC/H.266, MPEG-5 EVC, AVS1/2/3 with HDR Vivid, Dolby AC-4 and MPEG-H 3D Audio.
+- 🌈 **HDR that survives the trip:** HDR10 recovered from the bitstream, with HDR10+, ST 2094-10 and SL-HDR detected.
+- 🔊 **Atmos found in the frames**, in TrueHD and E-AC-3 JOC, plus DTS-HD MA and DTS:X. Tracks get named by what they really are.
+
+</td>
+<td width="50%" valign="top">
+
+- 💿 **Takes anything:** MP4, MKV, MPEG-TS, **Blu-ray M2TS**, Ogg, raw streams, and AVI, VOB, WMV or RealMedia through FFmpeg.
+- 💬 **Subtitles your way:** SRT, ASS, WebVTT and styled tx3g with karaoke, plus OCR for PGS and VobSub.
+- 🏷️ **Metadata worth looking at:** TheMovieDB, TheTVDB, iTunes and Apple TV, with artwork, chapter thumbnails and Kodi NFO.
+- ⚡ **Batch queue, full undo, 7 languages**, and an `mmw` CLI for scripting.
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/claunia/MediaMuxingWizard/devel/docs/screenshots/dark-truehd-atmos.png" width="48%" alt="TrueHD Atmos 7.1 kept in MP4"/>
+<img src="https://raw.githubusercontent.com/claunia/MediaMuxingWizard/devel/docs/screenshots/import.png" width="48%" alt="Importing a Blu-ray M2TS and an MKV into one MP4"/>
+</div>
+
+```sh
+mmw probe movie.ts                               # tracks and the actions each one offers
+mmw remux movie.mkv movie.m4v --action 3=aac+ac3 # remux with per-track conversions
+mmw search episode.m4v --apply                   # online metadata in one line
+mmw queue add *.mkv && mmw queue start           # batch a whole season
+```
+
+<div align="center">
+
+**[➜ Get Media Muxing Wizard](https://github.com/claunia/MediaMuxingWizard)**
+
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:ff2a6d,50:9d4edd,100:05d9e8&height=3" width="100%"/>
+
 ## 🧰 The workshop
 
 <div align="center">
 
 <a href="https://github.com/aaru-dps/libaaruformat"><img src="https://github-readme-stats.vercel.app/api/pin/?username=aaru-dps&repo=libaaruformat&bg_color=1a0b2e&title_color=ff2a6d&text_color=e0c3fc&icon_color=05d9e8&border_color=9d4edd&show_owner=true"/></a>
 <a href="https://github.com/claunia/plist-cil"><img src="https://github-readme-stats.vercel.app/api/pin/?username=claunia&repo=plist-cil&bg_color=1a0b2e&title_color=ff2a6d&text_color=e0c3fc&icon_color=05d9e8&border_color=9d4edd"/></a>
+<a href="https://github.com/claunia/MediaMuxingWizard"><img src="https://github-readme-stats.vercel.app/api/pin/?username=claunia&repo=MediaMuxingWizard&bg_color=1a0b2e&title_color=ff2a6d&text_color=e0c3fc&icon_color=05d9e8&border_color=9d4edd"/></a>
 <a href="https://github.com/claunia/obmafs3"><img src="https://github-readme-stats.vercel.app/api/pin/?username=claunia&repo=obmafs3&bg_color=1a0b2e&title_color=ff2a6d&text_color=e0c3fc&icon_color=05d9e8&border_color=9d4edd"/></a>
 <a href="https://github.com/claunia/romrepomgr"><img src="https://github-readme-stats.vercel.app/api/pin/?username=claunia&repo=romrepomgr&bg_color=1a0b2e&title_color=ff2a6d&text_color=e0c3fc&icon_color=05d9e8&border_color=9d4edd"/></a>
 <a href="https://github.com/claunia/edccchk"><img src="https://github-readme-stats.vercel.app/api/pin/?username=claunia&repo=edccchk&bg_color=1a0b2e&title_color=ff2a6d&text_color=e0c3fc&icon_color=05d9e8&border_color=9d4edd"/></a>
@@ -195,6 +263,7 @@ one commit (1,600+ of them) and one machine at a time.
 |---|---|
 | 💿 [**Aaru**](https://github.com/aaru-dps/Aaru) | The Data Preservation Suite. Dump, verify, convert and extract everything. |
 | 🧬 [**libaaruformat**](https://github.com/aaru-dps/libaaruformat) | Portable C implementation of the AaruFormat archival image. |
+| 🎬 [**Media Muxing Wizard**](https://github.com/claunia/MediaMuxingWizard) | MP4 + Matroska muxer and metadata editor that repairs Dolby Vision, keeps HDR and Atmos, and never re-encodes. |
 | 🗃️ [**OBMAFS3**](https://github.com/claunia/obmafs3) | *Object Based Media Archival File System*: a purpose-built deduplicating filesystem for disk images. |
 | 🎮 [**RomRepoMgr**](https://github.com/claunia/romrepomgr) | ROM Repository Manager: organises, compresses and dedupes ROM sets from DATs, and can mount them as virtual drives. |
 | 🖥️ [**osrepodbmgr**](https://github.com/claunia/osrepodbmgr) · [**apprepodbmgr**](https://github.com/claunia/apprepodbmgr) | Repository managers for operating system and application dumps, made for digital museums. |
@@ -203,6 +272,7 @@ one commit (1,600+ of them) and one machine at a time.
 | 📀 [**CdScanStraightener**](https://github.com/claunia/CdScanStraightener) | Deskews and straightens scanned discs and inlays. |
 | ✅ [**edccchk**](https://github.com/claunia/edccchk) | EDC/ECC checker for raw CD images. |
 | 📋 [**CICMMetadata**](https://github.com/claunia/CICMMetadata) | Metadata sidecar schema for digital assets (now superseded by Aaru metadata). |
+| 📜 [**preservation_scripts**](https://github.com/claunia/preservation_scripts) | The little scripts behind my dumping bench: disc, DVD, ring-code and SafeDisc dumps, metadata sidecars, PAR2 and more. |
 | 🗜️ [**cxa**](https://github.com/claunia/cxa) | *Claunia's Xperimental Archiver*: dedup, compression, encryption and full attribute preservation. |
 
 </details>
